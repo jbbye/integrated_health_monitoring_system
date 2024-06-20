@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication Log Input</title>
+    <link rel="stylesheet" href="prescriptionStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="search-wrapper">
+        <div class="input-box">
+            <input type="text" placeholder="Search Patient ID" required>
+            <i class='bx bx-search'></i>
+        </div>
+        <div class="search-results">
+            <p>Patient ID: 12345</p>
+            <button class="btn-small" onclick="window.location.href='demographicData.html'">See Patient's Demographic Data</button>
+            <button class="btn-small" onclick="window.location.href='diagnosisData.html'">See Patient's Diagnosis Data</button>
+        </div>
+    </div>
+    <div class="wrapper">
+        <form action="submitMedicationLog.html">
+            <h1>Medication Log</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Patient ID" required>
+                <i class='bx bxs-id-card'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Patient Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Prescription ID" required>
+                <i class='bx bxs-file-medical'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Doctor's Name" required>
+                <i class='bx bxs-user-md'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Facility Name" required>
+                <i class='bx bxs-clinic'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Medication Name" required>
+                <i class='bx bxs-capsule'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Medication Dosage" required>
+                <i class='bx bxs-capsule'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Medication Frequency" required>
+                <i class='bx bxs-calendar'></i>
+            </div>
+            <div class="input-box">
+                <input type="date" placeholder="Starting Date" required>
+                <i class='bx bxs-calendar'></i>
+            </div>
+            <div class="input-box">
+                <input type="date" placeholder="Ending Date" required>
+                <i class='bx bxs-calendar'></i>
+            </div>
+            <div class="input-box">
+                <textarea placeholder="Doctor's Note" required></textarea>
+                <i class='bx bxs-note'></i>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn" onclick="window.location.href='appointment.html'">Set Next Appointment</button>
+        </form>
+    </div>
+</body>
+
+</html>
