@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Leaf: Health Monitoring System</title>
+    <link rel="stylesheet" href="dashboardStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>       
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="New Leaf Logo" height="150px"> 
+            </div>
+            <ul class="links">
+                <li><a href="dashboard.html">Dashboard</a>
+                </li>
+                <li><a href="hero">Patient Demofraphic</a>
+                    <div class="dropdown-content">
+                        <a href="#manage">Input Demographics</a>
+                        <br>
+                        <a href="#show">Analyze Demographics</a>
+                    </div>
+                </li>
+                <li><a href="hero">Patient Diagnosis</a>
+                    <div class="dropdown-content">
+                        <a href="#manage">Record Diagnoses</a>
+                        <br>
+                        <a href="#show">Diagnosis Insights</a>
+                    </div>
+                </li>
+                <li><a href="hero">Physicians' Information</a>
+                    <div class="dropdown-content">
+                        <a href="addPhysician.html">Add Physician Details</a>
+                        <br>
+                        <a href="#show">Physician Stats</a>
+                    </div>
+                </li>
+                <li><a href="hero">Healthcare Facilities</a>
+                    <div class="dropdown-content">
+                        <a href="#manage">Register Facilities</a>
+                        <br>
+                        <a href="#show">Facility Analysis</a>
+                    </div>
+                </li>
+                <li><a href="hero">Diet Recommendations</a>
+                    <div class="dropdown-content">
+                        <a href="#manage">Diet Input</a>
+                        <br>
+                        <a href="#show">Recommendation Analytics</a>
+                    </div>
+                </li>
+                <li><a href="hero">Medication Tracker</a>
+                    <div class="dropdown-content">
+                        <a href="#manage">Log Medications</a>
+                        <br>
+                        <a href="#show">Medication Review</a>
+                    </div>
+                </li>                
+            </ul>
+            <a href="login.html" class="action_btn">Logout</a>
+            <div class="toggle_btn">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+
+        <ul class="dropdown_menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="#hero">Patient Demographic</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Input Demographics</a>
+                    <a href="#show">Analyze Demographics</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Patient Diagnosis</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Record Diagnoses</a>
+                    <a href="#show">Diagnosis Insights</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Physicians' Information</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Add Physician Details</a>
+                    <a href="#show">Physician Stats</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Healthcare Facilities</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Register Facilities</a>
+                    <a href="#show">Facility Analysis</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Diet Recommendations</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Diet Input</a>
+                    <a href="#show">Recommendation Analytics</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Medication Tracker</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Log Medications</a>
+                    <a href="#show">Medication Review</a>
+                </div>
+            </li>          
+            <li><a href="login.html" class="action_btn">Logout</a></li>   
+        </ul>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Welcome to New Leaf</h1>
+            <p>Your comprehensive solution for Diabetes Management and Health Monitoring </p>
+        </section>
+        
+    </main>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+             ? 'bx bx-x-circle'
+             : 'bx bx-menu'
+        }
+    </script>
+</body>
+</html>
