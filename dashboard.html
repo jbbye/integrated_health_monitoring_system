@@ -1,63 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Leaf: Health Monitoring System</title>
     <link rel="stylesheet" href="dashboardStyle.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
-    <header>       
+    <header>
         <div class="navbar">
             <div class="logo">
-                <img src="logo.png" alt="New Leaf Logo" height="150px"> 
+                <img src="logo.png" alt="New Leaf Logo" height="150px">
             </div>
             <ul class="links">
-                <li><a href="dashboard.html">Dashboard</a>
-                </li>
-                <li><a href="hero">Patient Demofraphic</a>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#hero">Patient Demographic</a>
                     <div class="dropdown-content">
                         <a href="#manage">Input Demographics</a>
                         <br>
                         <a href="#show">Analyze Demographics</a>
                     </div>
                 </li>
-                <li><a href="hero">Patient Diagnosis</a>
+                <li><a href="#hero">Patient Diagnosis</a>
                     <div class="dropdown-content">
                         <a href="#manage">Record Diagnoses</a>
                         <br>
                         <a href="#show">Diagnosis Insights</a>
                     </div>
                 </li>
-                <li><a href="hero">Physicians' Information</a>
+                <li><a href="#hero">Physicians' Information</a>
                     <div class="dropdown-content">
                         <a href="addPhysician.html">Add Physician Details</a>
                         <br>
                         <a href="#show">Physician Stats</a>
                     </div>
                 </li>
-                <li><a href="hero">Healthcare Facilities</a>
+                <li><a href="#hero">Healthcare Facilities</a>
                     <div class="dropdown-content">
                         <a href="#manage">Register Facilities</a>
                         <br>
                         <a href="#show">Facility Analysis</a>
                     </div>
                 </li>
-                <li><a href="hero">Diet Recommendations</a>
+                <li><a href="#hero">Diet Recommendations</a>
                     <div class="dropdown-content">
                         <a href="#manage">Diet Input</a>
                         <br>
                         <a href="#show">Recommendation Analytics</a>
                     </div>
                 </li>
-                <li><a href="hero">Medication Tracker</a>
+                <li><a href="#hero">Medication Tracker</a>
                     <div class="dropdown-content">
-                        <a href="#manage">Log Medications</a>
+                        <a href="prescription.html">Prescribe Medication</a>
                         <br>
-                        <a href="#show">Medication Review</a>
+                        <a href="medtrack.html">Medication Review</a>
                     </div>
-                </li>                
+                </li>
             </ul>
             <a href="login.html" class="action_btn">Logout</a>
             <div class="toggle_btn">
@@ -105,34 +107,151 @@
             <li class="dropdown">
                 <a href="#hero">Medication Tracker</a>
                 <div class="dropdown-content">
-                    <a href="#manage">Log Medications</a>
-                    <a href="#show">Medication Review</a>
+                    <a href="#manage">Prescribe Medication</a>
+                    <a href="medtrack.html">Medication Review</a>
                 </div>
-            </li>          
-            <li><a href="login.html" class="action_btn">Logout</a></li>   
+            </li>
+            <li><a href="login.html" class="action_btn">Logout</a></li>
         </ul>
     </header>
 
     <main>
         <section class="content">
             <h1>Welcome to New Leaf</h1>
-            <p>Your comprehensive solution for Diabetes Management and Health Monitoring </p>
+            <p>Your comprehensive solution for Diabetes Management and Health Monitoring</p>
+            <div class="dashboard">
+                <div class="card">
+                    <h2>Total Patients</h2>
+                    <canvas id="totalPatientsChart"></canvas>
+                </div>
+                <div class="card">
+                    <h2>Average Glucose Level</h2>
+                    <canvas id="averageGlucoseChart"></canvas>
+                </div>
+                <div class="card">
+                    <h2>Emergency Visits</h2>
+                    <canvas id="emergencyVisitsMeter"></canvas>
+                </div>
+                <div class="card">
+                    <h2>Daily Appointments</h2>
+                    <canvas id="appointmentsChart"></canvas>
+                </div>
+            </div>
         </section>
-        
     </main>
+
     <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
 
         toggleBtn.onclick = function() {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
 
-            toggleBtnIcon.classList = isOpen
-             ? 'bx bx-x-circle'
-             : 'bx bx-menu'
-        }
+            toggleBtnIcon.classList = isOpen ?
+                'bx bx-x-circle' :
+                'bx bx-menu';
+        };
+
+        // Chart.js configurations
+        const totalPatientsCtx = document.getElementById('totalPatientsChart').getContext('2d');
+        const averageGlucoseCtx = document.getElementById('averageGlucoseChart').getContext('2d');
+        const emergencyVisitsCtx = document.getElementById('emergencyVisitsMeter').getContext('2d');
+        const appointmentsCtx = document.getElementById('appointmentsChart').getContext('2d');
+
+        const totalPatientsChart = new Chart(totalPatientsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Facility 1', 'Facility 2', 'Facility 3'],
+                datasets: [{
+                    label: 'Total Patients',
+                    data: [120, 150, 180],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const averageGlucoseChart = new Chart(averageGlucoseCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Facility 1', 'Facility 2', 'Facility 3'],
+                datasets: [{
+                    label: 'Average Glucose Level',
+                    data: [90, 110, 130],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        const emergencyVisitsMeter = new Chart(emergencyVisitsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['No Visits', 'Emergency Visits'],
+                datasets: [{
+                    label: 'Emergency Visits',
+                    data: [300, 50],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        const appointmentsChart = new Chart(appointmentsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Appointments',
+                    data: [5, 8, 6, 7, 5, 4, 3],
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
     </script>
 </body>
+
 </html>
