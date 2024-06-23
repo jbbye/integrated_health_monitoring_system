@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Diagnosis - Medicine Analytics</title>
+    <link rel="stylesheet" href="recorddiagnosisStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="main-content">
+            <div class="patient-info">
+                <h2>Patient Information</h2>
+                <form id="diagnosisForm">
+                    <div class="form-group">
+                        <label for="patientId">Patient ID:</label>
+                        <input type="text" id="patientId" name="patientId" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientName">Patient Name:</label>
+                        <input type="text" id="patientName" name="patientName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <input type="text" id="gender" name="gender" readonly>
+                    </div>
+                </form>
+            </div>
+
+            <div class="diagnosis-form">
+                <h2>Diagnosis Information</h2>
+                <form id="diagnosisForm">
+                    <div class="form-group">
+                        <label for="diagnosisDate">Date of Diagnosis:</label>
+                        <input type="date" id="diagnosisDate" name="diagnosisDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Type of Diabetes:</label>
+                        <label><input type="radio" name="diabetesType" value="type1"> Type 1 Diabetes</label>
+                        <label><input type="radio" name="diabetesType" value="type2"> Type 2 Diabetes</label>
+                        <label><input type="radio" name="diabetesType" value="gestational"> Gestational Diabetes</label>
+                        <label><input type="radio" name="diabetesType" value="prediabetes"> Prediabetes</label>
+                        <label><input type="radio" name="diabetesType" value="other"> Other: <input type="text" name="diabetesTypeOther"></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptoms">Symptoms:</label>
+                        <textarea id="symptoms" name="symptoms"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="hba1c">HbA1c Level:</label>
+                        <input type="number" id="hba1c" name="hba1c">
+                    </div>
+                    <div class="form-group">
+                        <label for="fpg">Fasting Plasma Glucose (FPG):</label>
+                        <input type="number" id="fpg" name="fpg">
+                    </div>
+                    <div class="form-group">
+                        <label for="ogtt">Oral Glucose Tolerance Test (OGTT):</label>
+                        <input type="number" id="ogtt" name="ogtt">
+                    </div>
+                    <div class="form-group">
+                        <label for="lipidProfile">Lipid Profile:</label>
+                        <input type="text" id="lipidProfile" name="lipidProfile">
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodPressure">Blood Pressure:</label>
+                        <input type="text" id="bloodPressure" name="bloodPressure">
+                    </div>
+                    <div class="form-group">
+                        <label for="bmi">BMI:</label>
+                        <input type="number" id="bmi" name="bmi">
+                    </div>
+                    <div class="form-group">
+                        <label>Family History:</label>
+                        <label><input type="checkbox" name="familyHistory" value="type1"> Type 1 Diabetes</label>
+                        <label><input type="checkbox" name="familyHistory" value="type2"> Type 2 Diabetes</label>
+                        <label><input type="checkbox" name="familyHistory" value="gestational"> Gestational Diabetes</label>
+                        <label><input type="checkbox" name="familyHistory" value="none"> None</label>
+                        <label><input type="checkbox" name="familyHistory" value="other"> Other: <input type="text" name="familyHistoryOther"></label>
+                    </div>
+
+                    <h2>Additional Information</h2>
+                    <div class="form-group">
+                        <label for="medications">Medications Prescribed:</label>
+                        <textarea id="medications" name="medications"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="lifestyle">Lifestyle Recommendations:</label>
+                        <textarea id="lifestyle" name="lifestyle"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="followupDate">Follow-up Date:</label>
+                        <input type="date" id="followupDate" name="followupDate">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Save Diagnosis</button>
+                        <button type="reset" class="btn-reset">Reset Form</button>
+                        <a href="dashboard.html" class="btn-back">Back to Dashboard</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>© 2024 Medicine Analytics. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Analytics and Patient List</title>
+    <link rel="stylesheet" href="diagnosisinsightlistStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h2>Patient List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Date of Diagnosis</th>
+                        <th>Type of Diabetes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location='diagnosisinsight.html?id=1';" style="cursor: pointer;">
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>45</td>
+                        <td>01/02/2020</td>
+                        <td>Type 2</td>
+                    </tr>
+                    <tr onclick="window.location='diagnosisinsight.html?id=2';" style="cursor: pointer;">
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>52</td>
+                        <td>15/03/2018</td>
+                        <td>Type 1</td>
+                    </tr>
+                    <tr onclick="window.location='diagnosisinsight.html?id=3';" style="cursor: pointer;">
+                        <td>3</td>
+                        <td>Alan Walker</td>
+                        <td>38</td>
+                        <td>22/07/2019</td>
+                        <td>Type 2</td>
+                    </tr>
+                    <!-- Add more patients as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

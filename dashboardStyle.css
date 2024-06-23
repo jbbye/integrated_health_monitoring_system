@@ -11,6 +11,9 @@ body {
     background-image: url(Healthcare.png);
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 li {
@@ -20,7 +23,7 @@ li {
 a {
     text-decoration: none;
     color: #0e3958;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -34,7 +37,7 @@ header {
 }
 
 .navbar {
-    width: 100%;
+    width: 80%;
     height: 60%;
     max-width: 1200px;
     margin: 0 auto;
@@ -55,15 +58,20 @@ header {
 
 .navbar .toggle_btn {
     color: #0e3958;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     display: none;
+}
+
+.action_buttons {
+    display: flex;
+    gap: 20px;
 }
 
 .action_btn {
     background-color: #196f3d;
     color: #c8ece4;
-    padding: 8px 16px;
+    padding: 8px 15px;
     border: none;
     outline: none;
     border-radius: 20px;
@@ -79,13 +87,18 @@ header {
 }
 
 .action_btn:active {
-    scale: 0.95;
+    scale: 1.95;
+}
+
+.emergency_btn {
+    background-color: #e57373;
+    margin-left: 8px;
 }
 
 .dropdown_menu {
     display: none;
-    position: absolute;
-    right: 32px;
+    position: static;
+    right: 30px;
     top: 100px;
     width: 300px;
     height: 0;
@@ -101,7 +114,7 @@ header {
 }
 
 .dropdown_menu li {
-    padding: 12px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,22 +152,139 @@ header {
     flex-direction: column;
     text-align: center;
     padding: 40px;
+    align-items: center;
 }
 
 .content h1 {
-    font-size: 35px;
+    font-size: 30px;
     color: #0e3958;
-    margin-bottom: 15px auto;
+    margin-bottom: 10px;
 }
 
 .content p {
     font-size: 20px;
+    margin-bottom: 25px;
     color: #196f3d;
     max-width: 600px;
     margin: 0 auto;
+    white-space: nowrap;
+    /* Ensure the text is on one line */
 }
 
-@media (max-width: 992px) {
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 20px;
+    /* Increased margin-top for more space */
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    /* Center aligned */
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    /* Reduced margin-bottom */
+    color: #0e3958;
+    font-size: 18px;
+    /* Decreased font size */
+}
+
+.appointments ul {
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+    color: #666;
+    list-style-type: disc;
+    padding-left: 20px;
+    /* Indent bullet points */
+    text-align: left;
+}
+
+.appointments p {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.total-appointments {
+    color: pink;
+    /* Changed color to pink */
+    font-size: 14px;
+    /* Decreased font size */
+    margin: 10px 0;
+}
+
+.line_chart_section,
+.blogs_section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.line_chart_section h2,
+.blogs_section h2 {
+    color: #0e3958;
+    font-size: 24px;
+    /* Adjusted font size */
+    margin-bottom: 20px;
+    /* Added margin-bottom */
+}
+
+.line_chart_section canvas {
+    width: 100%;
+    max-width: 1200px;
+    /* Increased max-width for a larger chart */
+    height: 500px;
+    /* Set a fixed height for the chart */
+}
+
+.blogs_section {
+    display: flex;
+    flex-direction: column;
+    /* Ensure title is above the images */
+    align-items: center;
+    gap: 20px;
+}
+
+.blog_card_container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* Ensure images are in one line */
+    justify-content: center;
+}
+
+.blog_card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.blog_card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog_card h3 {
+    margin: 10px;
+    color: #0e3958;
+    font-size: 16px;
+    /* Adjusted font size */
+    text-align: center;
+    /* Center aligned text */
+}
+
+@media (max-width: 250px) {
     .navbar .links,
     .navbar .action_btn {
         display: none;
@@ -167,31 +297,73 @@ header {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 250px) {
     .dropdown_menu {
         left: 32px;
         width: unset;
     }
 }
 
-.dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+
+/* New CSS for alignment and spacing */
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content .dashboard {
     margin-top: 20px;
 }
 
-.card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
+.line_chart_section {
+    margin-top: 20px;
 }
 
-.card h2 {
+.blogs_section {
+    margin-top: 20px;
+}
+
+.blogs_section h2 {
+    width: 100%;
+    text-align: center;
     margin-bottom: 20px;
-    color: #0e3958;
+}
+
+
+/* Footer CSS */
+
+footer {
+    background-color: #0e3958;
+    color: #c8ece4;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .footer-content div {
+    margin: 10px;
+}
+
+footer .footer-content div h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer .footer-content div p,
+footer .footer-content div a {
+    color: #c8ece4;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer .footer-content div a:hover {
+    color: #196f3d;
 }
