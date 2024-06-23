@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Healthcare.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background: transparent;
+    border: 2px solid #c8ece4;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #0e3958;
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h2 {
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    padding: 8px 16px;
+    background-color: #196f3d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #0d4726;
+}
+
+.patient-profile {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.patient-profile h3,
+.patient-profile h4 {
+    margin-bottom: 10px;
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+
+.test-results {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.test-results th,
+.test-results td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.analysis-tools {
+    margin-top: 20px;
+}
+
+.tools-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.notifications {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.notifications h4 {
+    margin-bottom: 10px;
+}
+
+.notifications-list {
+    margin-top: 10px;
+}
+
+.notifications-list p {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Results Over Time - Medicine Analytics</title>
+    <link rel="stylesheet" href="compareresultsStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h2>Compare Results Over Time</h2>
+            </div>
+            <div class="controls">
+                <label for="patientSelect">Select Patient:</label>
+                <select id="patientSelect">
+                    <option value="1">John Doe</option>
+                    <option value="2">Jane Smith</option>
+                    <option value="3">Alan Walker</option>
+                </select>
+                <label for="testSelect">Select Test:</label>
+                <select id="testSelect">
+                    <option value="hba1c">HbA1c</option>
+                    <option value="fpg">FPG</option>
+                    <option value="ogtt">OGTT</option>
+                    <option value="lipid">Lipid Profile</option>
+                </select>
+            </div>
+            <div class="compare-results">
+                <div class="chart-container">
+                    <canvas id="resultsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Sample data (replace with actual data fetching logic)
+            var patientData = {
+                '1': {
+                    'hba1c': [7.2, 7.0, 6.8, 7.5, 7.3],
+                    'fpg': [120, 115, 110, 125, 118],
+                    'ogtt': [180, 175, 170, 185, 178],
+                    'lipid': [150, 145, 140, 155, 148]
+                },
+                '2': {
+                    'hba1c': [7.5, 7.3, 7.1, 7.6, 7.4],
+                    'fpg': [118, 112, 108, 122, 116],
+                    'ogtt': [185, 180, 175, 190, 183],
+                    'lipid': [155, 150, 145, 160, 153]
+                },
+                '3': {
+                    'hba1c': [6.8, 6.6, 6.4, 6.9, 6.7],
+                    'fpg': [110, 105, 100, 115, 108],
+                    'ogtt': [170, 165, 160, 175, 168],
+                    'lipid': [140, 135, 130, 145, 138]
+                }
+            };
+
+            var patientSelect = document.getElementById('patientSelect');
+            var testSelect = document.getElementById('testSelect');
+            var chartConfigs = {
+                'hba1c': {
+                    label: 'HbA1c Results',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                },
+                'fpg': {
+                    label: 'FPG Results',
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                    borderColor: 'rgba(255, 159, 64, 1)',
+                },
+                'ogtt': {
+                    label: 'OGTT Results',
+                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                },
+                'lipid': {
+                    label: 'Lipid Profile Results',
+                    backgroundColor: 'rgba(255, 205, 86, 0.2)',
+                    borderColor: 'rgba(255, 205, 86, 1)',
+                }
+            };
+
+            var chart;
+
+            function updateChart(patientId, testType) {
+                var data = {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                    datasets: [{
+                        label: chartConfigs[testType].label,
+                        data: patientData[patientId][testType],
+                        backgroundColor: chartConfigs[testType].backgroundColor,
+                        borderColor: chartConfigs[testType].borderColor,
+                        borderWidth: 1
+                    }]
+                };
+
+                if (chart) {
+                    chart.data = data;
+                    chart.update();
+                } else {
+                    var ctx = document.getElementById('resultsChart').getContext('2d');
+                    chart = new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+
+            // Initial chart display
+            updateChart(patientSelect.value, testSelect.value);
+
+            // Event listeners for selects
+            patientSelect.addEventListener('change', function() {
+                updateChart(patientSelect.value, testSelect.value);
+            });
+
+            testSelect.addEventListener('change', function() {
+                updateChart(patientSelect.value, testSelect.value);
+            });
+        });
+    </script>
+</body>
+
+</html>

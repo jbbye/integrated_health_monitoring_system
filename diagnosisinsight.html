@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - Medicine Analytics</title>
+    <link rel="stylesheet" href="diagnosisinsightStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="dashboard-header">
+                <h2>Diagnosis Insight</h2>
+                <button type="button" class="action-btn" onclick="window.location.href='appointment.html'">Schedule Appointment</button>
+            </div>
+            <div class="patient-profile">
+                <h3>Patient Profile</h3>
+                <div class="profile-details">
+                    <p><strong>Name:</strong> John Doe</p>
+                    <p><strong>Age:</strong> 45</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Contact:</strong> john.doe@example.com</p>
+                </div>
+                <h4>Recent Test Results</h4>
+                <table class="test-results">
+                    <thead>
+                        <tr>
+                            <th>Test</th>
+                            <th>Date</th>
+                            <th>Result</th>
+                            <th>Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HbA1c</td>
+                            <td>Jun 15, 2024</td>
+                            <td>7.2%</td>
+                            <td>Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td>FPG</td>
+                            <td>May 20, 2024</td>
+                            <td>130 mg/dL</td>
+                            <td>Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td>OGTT</td>
+                            <td>Apr 18, 2024</td>
+                            <td>220 mg/dL</td>
+                            <td>Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td>Random Glucose</td>
+                            <td>Mar 15, 2024</td>
+                            <td>210 mg/dL</td>
+                            <td>Diabetes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="analysis-tools">
+                    <h4>Analysis Tools</h4>
+                    <div class="tools-buttons">
+                        <button type="button" class="action-btn" onclick="window.location.href='compareresults.html'">Compare Results Over Time</button>
+                    </div>
+                </div>
+            </div>
+            <div class="notifications">
+                <h4>Notifications</h4>
+                <div class="notifications-list">
+                    <p>- New test results available for John Doe</p>
+                    <p>- Appointment reminder for Jane Smith at 10 AM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

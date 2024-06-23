@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Healthcare.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    background: transparent;
+    border: 2px solid #c8ece4;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #0e3958;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffdde3;
+    /* Light pink background */
+    border-bottom: 2px solid #c8ece4;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #0e3958;
+}
+
+.header .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0e3958;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.patient-info,
+.diagnosis-form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.patient-info h2,
+.diagnosis-form h2 {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #196f3d;
+    /* Green outline color on focus */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-submit,
+.btn-reset,
+.btn-back {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit {
+    background-color: #f11e45;
+    /* Light pink background color */
+}
+
+.btn-submit:hover {
+    background-color: #362424;
+    /* Darker pink on hover */
+}
+
+.btn-reset {
+    background-color: rgb(179, 44, 44);
+    /* Light gray background color */
+}
+
+.btn-reset:hover {
+    background-color: rgb(136, 51, 51);
+    /* Darker gray on hover */
+}
+
+.btn-back {
+    background-color: #5ac7b3;
+    /* Light blue background color */
+    text-decoration: none;
+    text-align: center;
+    line-height: 32px;
+    /* Adjust line height for better centering */
+}
+
+.btn-back:hover {
+    background-color: #46c0a1;
+    /* Darker blue on hover */
+}
+
+.footer {
+    padding: 10px;
+    background-color: #24e2e2;
+    /* Light pink background */
+    text-align: center;
+    border-top: 2px solid #c8ece4;
+}

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Leaf: Health Monitoring System</title>
+    <link rel="stylesheet" href="dashboardStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="New Leaf Logo" height="150px">
+            </div>
+            <ul class="links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#hero">Patient Demographic</a>
+                    <div class="dropdown-content">
+                        <a href="inputdemographic.html">Input Demographics</a>
+                        <br>
+                        <a href="demographic2.html">Analyze Demographics</a>
+                    </div>
+                </li>
+                <li><a href="#hero">Patient Diagnosis</a>
+                    <div class="dropdown-content">
+                        <a href="recorddiagnosis.html">Record Diagnoses</a>
+                        <br>
+                        <a href="diagnosisinsightlist.html">Diagnosis Insights</a>
+                    </div>
+                </li>
+                <li><a href="#hero">Physicians' Information</a>
+                    <div class="dropdown-content">
+                        <a href="addPhysician.html">Add Physician Details</a>
+                        <br>
+                        <a href="physicianStats.html">Physician Stats</a>
+                    </div>
+                </li>
+                <li><a href="#hero">Healthcare Facilities</a>
+                    <div class="dropdown-content">
+                        <a href="registerFacilities.html">Register Facilities</a>
+                        <br>
+                        <a href="facilityAnalysis.html">Facility Analysis</a>
+                    </div>
+                </li>
+                <li><a href="#hero">Diet Recommendations</a>
+                    <div class="dropdown-content">
+                        <a href="dietinput.html">Diet Input</a>
+                        <br>
+                        <a href="dietrecom.html">Recommendation Analytics</a>
+                    </div>
+                </li>
+                <li><a href="#hero">Medication Tracker</a>
+                    <div class="dropdown-content">
+                        <a href="prescription.html">Prescribe Medication</a>
+                        <br>
+                        <a href="medtrack.html">Medication Review</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="action_buttons">
+                <a href="login.html" class="action_btn">Logout</a>
+                <a href="tel:+911234567890" class="action_btn emergency_btn">Emergency Helpline</a>
+            </div>
+            <div class="toggle_btn">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+
+        <ul class="dropdown_menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="dropdown">
+                <a href="#hero">Patient Demographic</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Input Demographics</a>
+                    <a href="#show">Analyze Demographics</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Patient Diagnosis</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Record Diagnoses</a>
+                    <a href="#show">Diagnosis Insights</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Physicians' Information</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Add Physician Details</a>
+                    <a href="#show">Physician Stats</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Healthcare Facilities</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Register Facilities</a>
+                    <a href="#show">Facility Analysis</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Diet Recommendations</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Diet Input</a>
+                    <a href="#show">Recommendation Analytics</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#hero">Medication Tracker</a>
+                <div class="dropdown-content">
+                    <a href="#manage">Prescribe Medication</a>
+                    <a href="#show">Medication Review</a>
+                </div>
+            </li>
+            <li><a href="login.html" class="action_btn">Logout</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="content">
+            <h1>Welcome to New Leaf</h1>
+            <p>Your comprehensive solution for Diabetes Management and Health Monitoring</p>
+            <div class="dashboard">
+                <div class="card">
+                    <h2>Total Patients</h2>
+                    <canvas id="totalPatientsChart"></canvas>
+                </div>
+                <div class="card">
+                    <h2>Average Glucose Level</h2>
+                    <canvas id="averageGlucoseChart"></canvas>
+                </div>
+                <div class="card">
+                    <h2>Emergency Visits</h2>
+                    <canvas id="emergencyVisitsMeter"></canvas>
+                </div>
+                <div class="card appointments">
+                    <h2>Your Appointments Today</h2>
+                    <p class="total-appointments">Total Appointments: 4</p>
+                    <ul>
+                        <li>10:00 AM - John Doe</li>
+                        <li>11:00 AM - Jane Smith</li>
+                        <li>01:00 PM - Bob Johnson</li>
+                        <li>02:00 PM - Alice Brown</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h2>No. of Available Physicians</h2>
+                    <canvas id="availablePhysiciansChart"></canvas>
+                </div>
+            </div>
+            <div class="line_chart_section">
+                <h2>Patients vs Diabetes Type in 2024</h2>
+                <canvas id="patientsDiabetesChart"></canvas>
+            </div>
+            <div class="blogs_section">
+                <h2>Recent Diabetes Blogs</h2>
+                <div class="blog_card_container">
+                    <div class="blog_card">
+                        <img src="blog1.jpg" alt="Blog 1">
+                        <h3>Understanding Type 1 Diabetes</h3>
+                    </div>
+                    <div class="blog_card">
+                        <img src="blog2.jpg" alt="Blog 2">
+                        <h3>Managing Type 2 Diabetes</h3>
+                    </div>
+                    <div class="blog_card">
+                        <img src="blog3.jpg" alt="Blog 3">
+                        <h3>Gestational Diabetes: What You Need to Know</h3>
+                    </div>
+                    <div class="blog_card">
+                        <img src="blog4.jpg" alt="Blog 4">
+                        <h3>Healthy Eating with Diabetes</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>Contact Us</h4>
+                <p>Email: info@newleaf.com</p>
+                <p>Phone: +911234567890</p>
+            </div>
+            <div>
+                <h4>Address</h4>
+                <p>123 New Leaf St, Health City, Country</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="dashboard.html">Dashboard</a><br>
+                <a href="#hero">Patient Demographic</a><br>
+                <a href="#hero">Patient Diagnosis</a><br>
+                <a href="#hero">Physicians' Information</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+
+            toggleBtnIcon.classList = isOpen ?
+                'bx bx-x-circle' :
+                'bx bx-menu';
+        };
+
+        // Chart.js configurations
+        const totalPatientsCtx = document.getElementById('totalPatientsChart').getContext('2d');
+        const averageGlucoseCtx = document.getElementById('averageGlucoseChart').getContext('2d');
+        const emergencyVisitsCtx = document.getElementById('emergencyVisitsMeter').getContext('2d');
+        const availablePhysiciansCtx = document.getElementById('availablePhysiciansChart').getContext('2d');
+        const patientsDiabetesCtx = document.getElementById('patientsDiabetesChart').getContext('2d');
+
+        const totalPatientsChart = new Chart(totalPatientsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Facility 1', 'Facility 2', 'Facility 3'],
+                datasets: [{
+                    label: 'Total Patients',
+                    data: [120, 150, 180],
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const averageGlucoseChart = new Chart(averageGlucoseCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Facility 1', 'Facility 2', 'Facility 3'],
+                datasets: [{
+                    label: 'Average Glucose Level',
+                    data: [90, 110, 105],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        const emergencyVisitsMeter = new Chart(emergencyVisitsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['No Visits', 'Emergency Visits'],
+                datasets: [{
+                    label: 'Emergency Visits',
+                    data: [300, 50],
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(255, 99, 132, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        const availablePhysiciansChart = new Chart(availablePhysiciansCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Facility 1', 'Facility 2', 'Facility 3'],
+                datasets: [{
+                    label: 'Available Physicians',
+                    data: [10, 12, 8],
+                    backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const patientsDiabetesChart = new Chart(patientsDiabetesCtx, {
+            type: 'line',
+            data: {
+                labels: ['Type 1', 'Type 2', 'Gestational', 'Other'],
+                datasets: [{
+                    label: 'Number of Patients',
+                    data: [50, 200, 30, 20],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
