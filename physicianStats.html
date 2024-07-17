@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physicians' Statistics</title>
+    <link rel="stylesheet" href="physicianStatsStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Physicians' Statistics</h1>
+    </header>
+    
+    <section class="overview-dashboard">
+        <h2>Overview Dashboard</h2>
+        <div class="statistics">
+            <div>Total Physicians: <span>150</span></div>
+            <div>Average Patient Rating: <span>4.5</span></div>
+            <div>Number of Patients Treated: <span>1200</span></div>
+        </div>
+        <div class="visualizations">
+            <canvas id="trendChart"></canvas>
+        </div>
+    </section>
+
+    <section class="physician-details">
+        <h2>Physician Details</h2>
+        <input type="text" id="search" placeholder="Search by Specialization">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Specialization</th>
+                    <th>Contact Details</th>
+                </tr>
+            </thead>
+            <tbody id="physicianList">
+                <tr>
+                    <td>Dr. John Doe</td>
+                    <td>Cardiology</td>
+                    <td>john.doe@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="performance-metrics">
+        <h2>Performance Metrics</h2>
+        <div>Treatment Success Rate: <span>85%</span></div>
+        <div>Average Consultation Time: <span>30 mins</span></div>
+        <div>Consultations per Week: <span>50</span></div>
+    </section>
+
+    <section class="activity-log">
+        <h2>Activity Log</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Activity</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-07-17</td>
+                    <td>Patient Visit</td>
+                    <td>Routine Check-up</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="specialization-breakdown">
+        <h2>Specialization Breakdown</h2>
+        <div>Number of Physicians per Specialization: <span>Cardiology: 10, Neurology: 8, etc.</span></div>
+        <div>Average Rating by Specialization: <span>Cardiology: 4.6, Neurology: 4.4, etc.</span></div>
+    </section>
+
+    <section class="interactive-charts">
+        <h2>Interactive Charts and Graphs</h2>
+        <canvas id="performanceLineChart"></canvas>
+        <canvas id="specializationPieChart"></canvas>
+    </section>
+
+    <section class="patient-interaction">
+        <h2>Patient Interaction</h2>
+        <div>Number of Follow-ups: <span>300</span></div>
+        <div>Average Follow-up Duration: <span>15 mins</span></div>
+    </section>
+
+    <section class="notifications-alerts">
+        <h2>Notifications and Alerts</h2>
+        <div>Significant Milestones: <span>1000 Patients Treated</span></div>
+        <div>Upcoming Appointments: <span>5 Appointments Tomorrow</span></div>
+    </section>
+
+    <nav>
+       <button><a href="dashboard.html">Back to Main Dashboard</a></button> 
+       <button><a href="addPhysician.html">Add New Physician</a></button> 
+    </nav>
+
+</body>
+</html>
