@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Diagnosis</title>
+    <link rel="stylesheet" href="prescriptionStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="search-wrapper">
+        <div class="input-box">
+            <input type="text" placeholder="Search Patient ID" required>
+            <i class='bx bx-search'></i>
+        </div>
+        <div class="search-results">
+            <p>Patient ID: 12345</p>
+            <button class="btn-small" onclick="window.location.href='demographicData.html'">See Patient's Demographic Data</button>
+            <button class="btn-small" onclick="window.location.href='diagnosisData.html'">See Patient's Diagnosis Data</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <form action="submitDiagnosis.html">
+            <h1>Record Diagnosis</h1>
+            <!-- Existing Fields -->
+            <div class="input-box">
+                <input type="text" placeholder="Prescription ID" required>
+                <i class='bx bxs-id-card'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Patient Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="date" placeholder="Date Prescribed" required>
+                <i class='bx bx-calendar'></i>
+            </div>
+
+            <!-- New Fields from PHP Interface -->
+            <div class="input-box">
+                <input type="text" placeholder="Medication Name" required>
+                <i class='bx bx-health'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Dosage" required>
+                <i class='bx bx-clipboard'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Dosage Form" required>
+                <i class='bx bx-body'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Refill Information" required>
+                <i class='bx bx-heart'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Direction For Use" required>
+                <i class='bx bx-vial'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Test Prescribed" required>
+                <i class='bx bx-test-tube'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="text" placeholder="Comments" required>
+                <i class='bx bx-comment'></i>
+            </div>
+
+            <!-- Diabetes Type Selection -->
+            <div class="input-box">
+                <label>Type of Diabetes:</label>
+                <p></p>
+                <br>
+                <!-- adds a line break between paragraphs -->
+                <p></p>
+                <div class="radio-group">
+                    <label><input type="radio" name="diabetes_type" value="Type 1 Diabetes"> Type 1 Diabetes</label>
+                    <label><input type="radio" name="diabetes_type" value="Type 2 Diabetes"> Type 2 Diabetes</label>
+                </div>
+            </div>
+
+
+            <!-- Submit and Appointment Buttons -->
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn" onclick="window.location.href='appointment.html'">Set Next Appointment</button>
+        </form>
+    </div>
+</body>
+
+</html>

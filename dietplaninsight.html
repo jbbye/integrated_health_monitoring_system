@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan and Patient List</title>
+    <link rel="stylesheet" href="dietplaninsightStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h2>Patient Diet Plan List</h2>
+
+            <div class="toolbar">
+                <input type="text" id="search-bar" placeholder="Search by Patient ID or Name">
+                <button id="add-btn" onclick="window.location.href='dietplan.html';">Add</button>
+                <button id="delete-btn">Delete</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Healthcare Center ID</th>
+                        <th>Dietitian Employee ID</th>
+                        <th>Overall Goals</th>
+                        <th>Dietary Restrictions</th>
+                        <th>Nutrient Target</th>
+                        <th>Meal Frequency</th>
+                        <th>Food Group</th>
+                        <th>Recommendation</th>
+                        <th>Sample Meal Plan</th>
+                        <th>Portion Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location='dietplan.html?id=1';" style="cursor: pointer;">
+                        <td>1</td>
+                        <td>HC-101</td>
+                        <td>EMP-301</td>
+                        <td>Weight Loss</td>
+                        <td>No Dairy</td>
+                        <td>1500 Calories</td>
+                        <td>3</td>
+                        <td>Vegetables</td>
+                        <td>High Fiber</td>
+                        <td>Meal Plan A</td>
+                        <td>200g</td>
+                    </tr>
+                    <tr onclick="window.location='dietplan.html?id=2';" style="cursor: pointer;">
+                        <td>2</td>
+                        <td>HC-102</td>
+                        <td>EMP-302</td>
+                        <td>Muscle Gain</td>
+                        <td>Low Carb</td>
+                        <td>2500 Calories</td>
+                        <td>5</td>
+                        <td>Protein</td>
+                        <td>High Protein</td>
+                        <td>Meal Plan B</td>
+                        <td>300g</td>
+                    </tr>
+                    <!-- Add more patient rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

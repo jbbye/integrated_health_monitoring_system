@@ -17,53 +17,57 @@ body {
 
 .container {
     display: flex;
-    width: 90%;
-    max-width: 1200px;
-    background: transparent;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    background: rgba(255, 255, 255, 0.8);
     border: 2px solid #c8ece4;
-    backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     border-radius: 10px;
-    overflow: hidden;
-    color: #0e3958;
-}
-
-.main-content {
-    width: 100%;
     padding: 20px;
 }
 
-.main-content h2 {
-    margin-bottom: 20px;
-}
-
-.toolbar {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-#search-bar {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+h2 {
+    font-size: 24px;
+    color: #0e3958;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+#search {
+    padding: 8px;
     width: 200px;
+    border: 1px solid #196f3d;
+    border-radius: 5px;
 }
 
 #add-btn,
 #delete-btn {
     padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
     background-color: #196f3d;
     color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 #add-btn:hover,
 #delete-btn:hover {
-    background-color: #155d27;
+    background-color: #14562c;
+}
+
+.main-content {
+    overflow-x: auto;
 }
 
 table {
@@ -71,19 +75,26 @@ table {
     border-collapse: collapse;
 }
 
-table thead {
+thead {
     background: #196f3d;
-    color: #fff;
+    color: white;
 }
 
-table th,
-table td {
-    padding: 10px;
+thead th {
+    padding: 12px 10px;
     text-align: left;
+}
+
+tbody td {
+    padding: 10px 8px;
     border-bottom: 1px solid #ddd;
 }
 
-table tbody tr:hover {
-    background: #e0e0e0;
+tbody tr:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+tbody tr {
     cursor: pointer;
 }

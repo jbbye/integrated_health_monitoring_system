@@ -4,78 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Dashboard - Medicine Analytics</title>
+    <title>Recorded Diagnosis - Patient Details</title>
     <link rel="stylesheet" href="diagnosisinsightStyle.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <div class="container">
+        <header class="header">
+            <h1>Patient Diagnosis Details</h1>
+
+        </header>
+
         <div class="main-content">
-            <div class="dashboard-header">
-                <h2>Diagnosis Insight</h2>
-                <button type="button" class="action-btn" onclick="window.location.href='appointment.html'">Schedule Appointment</button>
-            </div>
-            <div class="patient-profile">
-                <h3>Patient Profile</h3>
-                <div class="profile-details">
-                    <p><strong>Name:</strong> John Doe</p>
-                    <p><strong>Age:</strong> 45</p>
-                    <p><strong>Gender:</strong> Male</p>
-                    <p><strong>Contact:</strong> john.doe@example.com</p>
-                </div>
-                <h4>Recent Test Results</h4>
-                <table class="test-results">
-                    <thead>
-                        <tr>
-                            <th>Test</th>
-                            <th>Date</th>
-                            <th>Result</th>
-                            <th>Interpretation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>HbA1c</td>
-                            <td>Jun 15, 2024</td>
-                            <td>7.2%</td>
-                            <td>Diabetes</td>
-                        </tr>
-                        <tr>
-                            <td>FPG</td>
-                            <td>May 20, 2024</td>
-                            <td>130 mg/dL</td>
-                            <td>Diabetes</td>
-                        </tr>
-                        <tr>
-                            <td>OGTT</td>
-                            <td>Apr 18, 2024</td>
-                            <td>220 mg/dL</td>
-                            <td>Diabetes</td>
-                        </tr>
-                        <tr>
-                            <td>Random Glucose</td>
-                            <td>Mar 15, 2024</td>
-                            <td>210 mg/dL</td>
-                            <td>Diabetes</td>
-                        </tr>
-                    </tbody>
+            <!-- Patient Information Display -->
+            <div class="patient-details">
+                <h2>Patient Information</h2>
+                <table class="patient-info-table">
+                    <tr>
+                        <th>Patient ID:</th>
+                        <td id="patientIdDisplay">P12345</td>
+                    </tr>
+                    <tr>
+                        <th>First Name:</th>
+                        <td id="firstNameDisplay">John</td>
+                    </tr>
+                    <tr>
+                        <th>Middle Name:</th>
+                        <td id="middleNameDisplay">A.</td>
+                    </tr>
+                    <tr>
+                        <th>Last Name:</th>
+                        <td id="lastNameDisplay">Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td id="genderDisplay">Male</td>
+                    </tr>
+                    <tr>
+                        <th>Address:</th>
+                        <td id="addressDisplay">House No: 123, Road No: 4, Area: Downtown, City: Springfield</td>
+                    </tr>
+                    <tr>
+                        <th>Monitoring Account ID:</th>
+                        <td id="monitoringAccountIdDisplay">MA56789</td>
+                    </tr>
                 </table>
-                <div class="analysis-tools">
-                    <h4>Analysis Tools</h4>
-                    <div class="tools-buttons">
-                        <button type="button" class="action-btn" onclick="window.location.href='compareresults.html'">Compare Results Over Time</button>
-                    </div>
-                </div>
             </div>
-            <div class="notifications">
-                <h4>Notifications</h4>
-                <div class="notifications-list">
-                    <p>- New test results available for John Doe</p>
-                    <p>- Appointment reminder for Jane Smith at 10 AM</p>
-                </div>
+
+            <!-- Diagnosis Information Display -->
+            <div class="diagnosis-details">
+                <h2>Diagnosis Information</h2>
+                <table class="diagnosis-info-table">
+                    <tr>
+                        <th>Date of Diagnosis:</th>
+                        <td id="diagnosisDateDisplay">2024-09-05</td>
+                    </tr>
+                    <tr>
+                        <th>Diagnosis ID:</th>
+                        <td id="diagnosisIdDisplay">D123456</td>
+                    </tr>
+                    <tr>
+                        <th>Diagnosis Name:</th>
+                        <td id="diagnosisNameDisplay">Hypertension</td>
+                    </tr>
+                    <tr>
+                        <th>ICT-10 Code:</th>
+                        <td id="ict10CodeDisplay">I10</td>
+                    </tr>
+                    <tr>
+                        <th>Diagnosis Description:</th>
+                        <td id="diagnosisDescriptionDisplay">Elevated blood pressure, requiring ongoing monitoring and lifestyle changes.</td>
+                    </tr>
+                    <tr>
+                        <th>Physician ID:</th>
+                        <td id="physicianIdDisplay">PH45678</td>
+                    </tr>
+                </table>
             </div>
         </div>
+
+        <footer class="footer">
+            <p>© 2024 Medicine Analytics. All rights reserved.</p>
+        </footer>
     </div>
 </body>
 

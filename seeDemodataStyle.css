@@ -1,0 +1,90 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(Healthcare.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    width: 900px;
+    /* Increased width for better visibility */
+    background: transparent;
+    border: 2px solid #c8ece4;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #0e3958;
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: 0 auto;
+}
+
+
+/* Header Styles */
+
+.header {
+    background-color: #4CAF50;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/* Report Container */
+
+.report-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+
+/* Table Styles */
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.report-table td {
+    background-color: #f9f9f9;
+}
+
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 40px;
+}

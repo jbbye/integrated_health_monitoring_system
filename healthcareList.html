@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Facilities List</title>
+    <link rel="stylesheet" href="healthcarelistStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h2>Healthcare Facilities List</h2>
+            <div class="toolbar">
+                <input type="text" id="search-bar" placeholder="Search facilities...">
+                <button id="add-btn" onclick="window.location='healthcare.html';">Add</button>
+                <button id="delete-btn">Delete</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Healthcare Facility ID</th>
+                        <th>Healthcare Facility Name</th>
+                        <th>Address: House No</th>
+                        <th>Address: Road No</th>
+                        <th>Address: City</th>
+                        <th>Address: Country</th>
+                        <th>Specialization</th>
+                        <th>Monitoring Account ID</th>
+                        <th>Patient ID</th>
+                        <th>Contact Number</th>
+                    </tr>
+                </thead>
+                <tbody id="facility-list">
+                    <tr onclick="window.location='healthcareinsight.html?id=1';" style="cursor: pointer;">
+                        <td>1</td>
+                        <td>ABC Health Center</td>
+                        <td>123</td>
+                        <td>45</td>
+                        <td>Citytown</td>
+                        <td>Countryland</td>
+                        <td>General Medicine</td>
+                        <td>1001</td>
+                        <td>501</td>
+                        <td>555-1234</td>
+                    </tr>
+                    <tr onclick="window.location='healthcareinsight.html?id=2';" style="cursor: pointer;">
+                        <td>2</td>
+                        <td>XYZ Clinic</td>
+                        <td>456</td>
+                        <td>78</td>
+                        <td>Townsville</td>
+                        <td>Nationstate</td>
+                        <td>Pediatrics</td>
+                        <td>1002</td>
+                        <td>502</td>
+                        <td>555-5678</td>
+                    </tr>
+                    <!-- Add more facilities as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

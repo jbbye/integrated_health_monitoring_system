@@ -1,0 +1,135 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Healthcare.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1400px;
+    background: transparent;
+    border: 2px solid #c8ece4;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 20px;
+    color: #0e3958;
+    overflow-x: auto;
+    /* Ensures horizontal scrolling if the content exceeds width */
+}
+
+
+/* Search Bar */
+
+.search-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+#search {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #c8ece4;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #0e3958;
+}
+
+
+/* Button Container */
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 12px;
+    background-color: #196f3d;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #14532b;
+}
+
+
+/* Main Content */
+
+.main-content {
+    width: 100%;
+}
+
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+    /* Ensures the table is scrollable horizontally */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead {
+    background: #196f3d;
+    color: #fff;
+}
+
+table th,
+table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    /* Prevents text from wrapping */
+}
+
+table tbody tr:hover {
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    button {
+        font-size: 14px;
+    }
+    #search {
+        width: 200px;
+    }
+}

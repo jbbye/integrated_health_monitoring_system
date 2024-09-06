@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="seenurseStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Nurse List</h2>
+            <div class="controls">
+                <input type="text" id="search" placeholder="Search...">
+                <button onclick="window.location='nurse.html';" id="add-btn">Add Employee</button>
+                <button id="delete-btn">Delete Selected</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Healthcare Center ID</th>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Gender</th>
+                        <th>Hiring Date</th>
+                        <th>House No</th>
+                        <th>Road No</th>
+                        <th>Area</th>
+                        <th>City</th>
+                        <th>Monitoring Account ID</th>
+                        <th>Attending Patient ID</th>
+                        <th>Prescription ID</th>
+                        <th>Assisting Charge</th>
+                        <th>Duty Status</th>
+                        <th>Duty Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>HC-101</td>
+                        <td>John</td>
+                        <td>M.</td>
+                        <td>Doe</td>
+                        <td>Male</td>
+                        <td>01/02/2020</td>
+                        <td>12</td>
+                        <td>4B</td>
+                        <td>Sunset Ave</td>
+                        <td>New York</td>
+                        <td>MA-304</td>
+                        <td>PT-102</td>
+                        <td>PR-245</td>
+                        <td>$500</td>
+                        <td>Active</td>
+                        <td>Surgery</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>HC-202</td>
+                        <td>Jane</td>
+                        <td>A.</td>
+                        <td>Smith</td>
+                        <td>Female</td>
+                        <td>15/03/2018</td>
+                        <td>45</td>
+                        <td>2A</td>
+                        <td>Elm Street</td>
+                        <td>Boston</td>
+                        <td>MA-405</td>
+                        <td>PT-208</td>
+                        <td>PR-409</td>
+                        <td>$400</td>
+                        <td>Inactive</td>
+                        <td>Cardiology</td>
+                    </tr>
+                    <!-- Add more employee entries as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Updated to match previous design */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Healthcare.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+
+/* Container for forms */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+
+/* Form Wrapper */
+
+.wrapper {
+    background: transparent;
+    /* Transparent background to match the previous blur effect */
+    border: 2px solid #c8ece4;
+    /* Light green border */
+    backdrop-filter: blur(20px);
+    /* Blurred background for aesthetic consistency */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    color: #0e3958;
+    /* Darker text color for readability */
+}
+
+.wrapper:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Slightly adjusted hover effect */
+}
+
+.wrapper h1 {
+    font-size: 24px;
+    color: #0e3958;
+    /* Dark text color for headers */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Input Field Styles */
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Light background for input fields */
+    border: 2px solid #c8ece4;
+    /* Light green border */
+    border-radius: 8px;
+    color: #0e3958;
+    /* Darker text color */
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input::placeholder,
+.input-box select {
+    color: #6c757d;
+    /* Slightly darker placeholder color */
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #196f3d;
+    /* Dark green focus border */
+}
+
+
+/* Button Styles */
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #196f3d;
+    /* Dark green button color to match previous design */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #14532b;
+    /* Darker green on hover */
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px;
+    }
+    .container {
+        max-width: 500px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+}

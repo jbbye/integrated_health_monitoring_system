@@ -1,0 +1,105 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Healthcare.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #c8ece4;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    color: #0e3958;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #0e3958;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Profession Selection Styles */
+
+.profession-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profession-btn {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Different Colors for Each Profession */
+
+.doctor-btn {
+    background-color: #196f3d;
+    /* Dark Green (matches previous aesthetic) */
+}
+
+.dietitian-btn {
+    background-color: #FF9800;
+    /* Orange */
+}
+
+.lab-tech-btn {
+    background-color: #3F51B5;
+    /* Blue */
+}
+
+.nurse-btn {
+    background-color: #E91E63;
+    /* Pink */
+}
+
+
+/* Hover Effects */
+
+.profession-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    /* Subtle hover shadow effect */
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .profession-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+}

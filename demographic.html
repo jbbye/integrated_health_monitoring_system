@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Demographic Data</title>
+    <link rel="stylesheet" href="demographicStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Patient Demographic Data</h1>
+        </header>
+
+        <div class="form-container">
+            <form id="patientDemographicsForm">
+                <h2>Enter Patient Demographics</h2>
+
+                <!-- Patient ID -->
+                <div class="form-group">
+                    <label for="patient_id">Patient ID:</label>
+                    <input type="text" id="patient_id" name="patient_id" placeholder="Enter patient ID" required>
+                </div>
+
+                <!-- Healthcare Center ID -->
+                <div class="form-group">
+                    <label for="healthcare_center_id">Healthcare Center ID:</label>
+                    <input type="text" id="healthcare_center_id" name="healthcare_center_id" placeholder="Enter healthcare center ID" required>
+                </div>
+
+                <!-- Blood Pressure -->
+                <div class="form-group">
+                    <label for="blood_pressure">Blood Pressure (mmHg):</label>
+                    <input type="text" id="blood_pressure" name="blood_pressure" placeholder="Enter blood pressure" required>
+                </div>
+
+                <!-- Heart Rate -->
+                <div class="form-group">
+                    <label for="heart_rate">Heart Rate (bpm):</label>
+                    <input type="text" id="heart_rate" name="heart_rate" placeholder="Enter heart rate" required>
+                </div>
+
+                <!-- Temperature -->
+                <div class="form-group">
+                    <label for="temperature">Temperature (°C):</label>
+                    <input type="text" id="temperature" name="temperature" placeholder="Enter body temperature" required>
+                </div>
+
+                <!-- Respiratory Rate -->
+                <div class="form-group">
+                    <label for="respiratory_rate">Respiratory Rate (breaths/min):</label>
+                    <input type="text" id="respiratory_rate" name="respiratory_rate" placeholder="Enter respiratory rate" required>
+                </div>
+
+                <!-- Blood Type -->
+                <div class="form-group">
+                    <label for="blood_type">Blood Type:</label>
+                    <input type="text" id="blood_type" name="blood_type" placeholder="Enter blood type" required>
+                </div>
+
+                <!-- Rh Factor -->
+                <div class="form-group">
+                    <label for="rh_factor">Rh Factor:</label>
+                    <input type="text" id="rh_factor" name="rh_factor" placeholder="Enter Rh factor" required>
+                </div>
+
+                <!-- Allergies -->
+                <div class="form-group">
+                    <label for="allergies">Allergies:</label>
+                    <textarea id="allergies" name="allergies" rows="3" placeholder="List any known allergies"></textarea>
+                </div>
+
+                <!-- Immunization -->
+                <div class="form-group">
+                    <label for="immunization">Immunization:</label>
+                    <textarea id="immunization" name="immunization" rows="3" placeholder="List immunization records"></textarea>
+                </div>
+
+                <!-- Family History -->
+                <div class="form-group">
+                    <label for="family_history">Family History:</label>
+                    <textarea id="family_history" name="family_history" rows="3" placeholder="Enter family medical history"></textarea>
+                </div>
+
+                <!-- Addiction -->
+                <div class="form-group">
+                    <label for="addiction">Addiction (if any):</label>
+                    <textarea id="addiction" name="addiction" rows="3" placeholder="Enter any known addiction"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <p>© 2024 Medical Records. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

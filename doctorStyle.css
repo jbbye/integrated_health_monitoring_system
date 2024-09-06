@@ -1,0 +1,117 @@
+/* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+/* Container for forms */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+
+/* Form Wrapper */
+
+.wrapper {
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    color: #eaeaea;
+}
+
+.wrapper:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper h1 {
+    font-size: 22px;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* Input Field Styles */
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: 2px solid #555;
+    border-radius: 8px;
+    color: #eaeaea;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input::placeholder,
+.input-box select {
+    color: #a1a1a1;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #00bfa5;
+}
+
+
+/* Button Styles */
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bfa5;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007f6a;
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px;
+    }
+    .container {
+        max-width: 500px;
+    }
+    .btn {
+        font-size: 16px;
+    }
+}

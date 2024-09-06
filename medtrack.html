@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Analytics and Patient List</title>
+    <link rel="stylesheet" href="medtrackStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Medicine Analytics</h2>
+            <div class="analytics">
+                <div class="analytics-item">
+                    <p>Total Medicines:</p>
+                    <h3>150</h3>
+                </div>
+                <div class="analytics-item">
+                    <p>Medicines in Stock:</p>
+                    <h3>120</h3>
+                </div>
+                <div class="analytics-item">
+                    <p>Medicines Dispensed:</p>
+                    <h3>30</h3>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h2>Patient List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Medicine</th>
+                        <th>Dosage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location='patientdetails.html?id=1';" style="cursor: pointer;">
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>45</td>
+                        <td>Metformin</td>
+                        <td>500mg</td>
+                    </tr>
+                    <tr onclick="window.location='patientdetails.html?id=2';" style="cursor: pointer;">
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                        <td>52</td>
+                        <td>Insulin</td>
+                        <td>10 units</td>
+                    </tr>
+                    <tr onclick="window.location='patientdetails.html?id=3';" style="cursor: pointer;">
+                        <td>3</td>
+                        <td>Alan Walker</td>
+                        <td>38</td>
+                        <td>Gliclazide</td>
+                        <td>80mg</td>
+                    </tr>
+                    <!-- Add more patients as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

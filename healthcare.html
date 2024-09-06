@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Facility Info</title>
+    <link rel="stylesheet" href="healthcareStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="submitHealthcareInfo.html">
+            <h1>Healthcare Facility Info</h1>
+
+            <!-- Healthcare Facility ID -->
+            <div class="input-box">
+                <input type="text" placeholder="Healthcare Facility ID" required>
+                <i class='bx bx-id-card'></i>
+            </div>
+
+            <!-- Healthcare Center Name -->
+            <div class="input-box">
+                <input type="text" placeholder="Healthcare Center Name" required>
+                <i class='bx bxs-building-house'></i>
+            </div>
+
+            <!-- Address Fields -->
+            <div class="input-box">
+                <input type="text" placeholder="House No" required>
+                <i class='bx bx-home'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Road No" required>
+                <i class='bx bx-road'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="City" required>
+                <i class='bx bx-building'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Country" required>
+                <i class='bx bx-globe'></i>
+            </div>
+
+            <!-- Specialization -->
+            <div class="input-box">
+                <input type="text" placeholder="Specialization" required>
+                <i class='bx bx-health'></i>
+            </div>
+
+            <!-- Monitoring Account ID -->
+            <div class="input-box">
+                <input type="text" placeholder="Monitoring Account ID" required>
+                <i class='bx bx-user-check'></i>
+            </div>
+
+            <!-- Patient ID -->
+            <div class="input-box">
+                <input type="text" placeholder="Patient ID" required>
+                <i class='bx bx-user'></i>
+            </div>
+
+            <!-- Contact Numbers -->
+            <div id="contact-container">
+                <div class="input-box">
+                    <input type="text" placeholder="Contact No" required>
+                    <i class='bx bx-phone'></i>
+                </div>
+            </div>
+            <button type="button" id="add-contact" class="btn">Add More Contacts</button>
+
+            <button type="submit" class="btn">Submit Info</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('add-contact').addEventListener('click', function() {
+            const contactContainer = document.getElementById('contact-container');
+            const newContact = document.createElement('div');
+            newContact.classList.add('input-box');
+            newContact.innerHTML = `
+                <input type="text" placeholder="Contact No">
+                <i class='bx bx-phone'></i>
+            `;
+            contactContainer.appendChild(newContact);
+        });
+    </script>
+</body>
+
+</html>

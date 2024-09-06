@@ -17,6 +17,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     width: 90%;
     max-width: 1200px;
     background: transparent;
@@ -31,6 +32,8 @@ body {
 .main-content {
     width: 100%;
     padding: 20px;
+    overflow-x: auto;
+    /* Ensure horizontal scrolling if needed */
 }
 
 .main-content h2 {
@@ -48,7 +51,11 @@ body {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 200px;
+    width: 300px;
+    flex: 1;
+    /* Allow search bar to grow */
+    max-width: 400px;
+    /* Prevent it from growing too large */
 }
 
 #add-btn,
@@ -59,6 +66,8 @@ body {
     background-color: #196f3d;
     color: #fff;
     cursor: pointer;
+    margin-left: 10px;
+    /* Add spacing between buttons */
 }
 
 #add-btn:hover,
@@ -69,6 +78,8 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 1000px;
+    /* Ensure table has a minimum width */
 }
 
 table thead {
@@ -78,12 +89,44 @@ table thead {
 
 table th,
 table td {
-    padding: 10px;
+    padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    /* Prevent text wrapping */
 }
 
 table tbody tr:hover {
     background: #e0e0e0;
     cursor: pointer;
+}
+
+
+/* Responsive adjustments */
+
+@media screen and (max-width: 1200px) {
+    table {
+        min-width: 1200px;
+        /* Adjust based on screen size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #search-bar {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    #add-btn,
+    #delete-btn {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    table {
+        min-width: 800px;
+        /* Adjust for smaller screens */
+    }
 }

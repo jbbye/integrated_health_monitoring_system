@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient List</title>
+    <link rel="stylesheet" href="demoPatListStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Patient List</h1>
+            <input type="text" id="search" placeholder="Search by Patient ID or Name">
+        </div>
+        <div class="actions">
+            <a href="demographic.html" class="btn add-btn">Add Patient</a>
+            <button class="btn delete-btn">Delete Selected</button>
+        </div>
+        <div class="main-content">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="window.location='demoinsight.html?id=1';" style="cursor: pointer;">
+                        <td>1</td>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr onclick="window.location='patientReport.html?id=2';" style="cursor: pointer;">
+                        <td>2</td>
+                        <td>Jane Smith</td>
+                    </tr>
+                    <tr onclick="window.location='patientReport.html?id=3';" style="cursor: pointer;">
+                        <td>3</td>
+                        <td>Alan Walker</td>
+                    </tr>
+                    <!-- Add more patients as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

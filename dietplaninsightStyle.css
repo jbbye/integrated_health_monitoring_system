@@ -17,20 +17,23 @@ body {
 
 .container {
     display: flex;
-    width: 90%;
-    max-width: 1200px;
+    flex-direction: column;
+    width: 95%;
+    max-width: 1300px;
     background: transparent;
     border: 2px solid #c8ece4;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: auto;
+    /* Allows horizontal scrolling if necessary */
     color: #0e3958;
 }
 
 .main-content {
     width: 100%;
     padding: 20px;
+    overflow-x: auto;
 }
 
 .main-content h2 {
@@ -48,7 +51,8 @@ body {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 200px;
+    width: 300px;
+    max-width: 400px;
 }
 
 #add-btn,
@@ -69,6 +73,8 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 1200px;
+    /* Ensures that all columns fit */
 }
 
 table thead {
@@ -81,9 +87,41 @@ table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    /* Prevents text from wrapping */
 }
 
 table tbody tr:hover {
     background: #e0e0e0;
     cursor: pointer;
+}
+
+
+/* Responsive adjustments */
+
+@media screen and (max-width: 1200px) {
+    table {
+        min-width: 1500px;
+        /* Ensures table width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #search-bar {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    #add-btn,
+    #delete-btn {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    table {
+        min-width: 1000px;
+        /* Smaller table size for mobile */
+    }
 }

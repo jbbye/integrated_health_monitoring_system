@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="seelabTStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search employees...">
+            <button id="add-btn" onclick="window.location='labT.html';">Add Employee</button>
+        </div>
+
+        <div class="main-content">
+            <h2>Lab Technician List</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Healthcare Center ID</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Hiring Date</th>
+                            <th>House No</th>
+                            <th>Road No</th>
+                            <th>Area</th>
+                            <th>City</th>
+                            <th>Monitoring Account ID</th>
+                            <th>Attending Patient ID</th>
+                            <th>Prescription ID</th>
+                            <th>Sample ID</th>
+                            <th>Sample Collection Date</th>
+                            <th>Result</th>
+                            <th>Result Delivery Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>101</td>
+                            <td>John</td>
+                            <td>A.</td>
+                            <td>Doe</td>
+                            <td>Male</td>
+                            <td>01/01/2020</td>
+                            <td>12</td>
+                            <td>5</td>
+                            <td>Green Park</td>
+                            <td>New York</td>
+                            <td>201</td>
+                            <td>1001</td>
+                            <td>2001</td>
+                            <td>301</td>
+                            <td>01/03/2023</td>
+                            <td>Positive</td>
+                            <td>03/03/2023</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="action-buttons">
+                <button id="delete-btn">Delete Employee</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

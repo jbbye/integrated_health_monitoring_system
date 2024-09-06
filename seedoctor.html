@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Employee and Patient List</title>
+    <link rel="stylesheet" href="seeemployeeStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search employees...">
+        </div>
+        <div class="button-container">
+            <button id="add-button" onclick="window.location='doctor.html';">Add Employee</button>
+            <button id="delete-button">Delete Employee</button>
+        </div>
+        <div class="main-content">
+            <h2>Doctor's List</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>Healthcare Center ID</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Gender</th>
+                            <th>Hiring Date</th>
+                            <th>House No</th>
+                            <th>Road No</th>
+                            <th>Area</th>
+                            <th>City</th>
+                            <th>Monitoring Account ID</th>
+                            <th>Attending Patient ID</th>
+                            <th>Prescription ID</th>
+                            <th>Visit Charge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr onclick="window.location='employeeDetail.html?id=1';" style="cursor: pointer;">
+                            <td>1</td>
+                            <td>101</td>
+                            <td>John</td>
+                            <td>Michael</td>
+                            <td>Doe</td>
+                            <td>Male</td>
+                            <td>01/02/2020</td>
+                            <td>12</td>
+                            <td>34</td>
+                            <td>Park Avenue</td>
+                            <td>New York</td>
+                            <td>1234</td>
+                            <td>2001</td>
+                            <td>3001</td>
+                            <td>$200</td>
+                        </tr>
+                        <tr onclick="window.location='employeeDetail.html?id=2';" style="cursor: pointer;">
+                            <td>2</td>
+                            <td>102</td>
+                            <td>Jane</td>
+                            <td>Anna</td>
+                            <td>Smith</td>
+                            <td>Female</td>
+                            <td>15/03/2018</td>
+                            <td>56</td>
+                            <td>78</td>
+                            <td>Main St</td>
+                            <td>Los Angeles</td>
+                            <td>2345</td>
+                            <td>2002</td>
+                            <td>3002</td>
+                            <td>$150</td>
+                        </tr>
+                        <!-- Add more employees as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
